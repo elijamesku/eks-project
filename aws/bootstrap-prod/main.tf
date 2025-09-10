@@ -2,6 +2,7 @@ locals {
   env = "prod"
 }
 
+# s3 bucket
 resource "aws_s3_bucket" "tfstate" {
   bucket = "ss33-${local.env}-tfstate"
   tags = {
@@ -10,6 +11,7 @@ resource "aws_s3_bucket" "tfstate" {
   }
 }
 
+# public access block
 resource "aws_s3_bucket_public_access_block" "block" {
   bucket                  = aws_s3_bucket.tfstate.id
   block_public_acls       = true
@@ -19,6 +21,7 @@ resource "aws_s3_bucket_public_access_block" "block" {
 
 }
 
+# bucket versioning
 resource "aws_s3_bucket_versioning" "v" {
   bucket = aws_s3_bucket.tfstate.id
   versioning_configuration {
@@ -26,6 +29,7 @@ resource "aws_s3_bucket_versioning" "v" {
   }
 }
 
+# encryption configuration
 resource "aws_s3_bucket_server_side_encryption_configuration" "enc" {
   bucket = aws_s3_bucket.tfstate.id
   rule {
@@ -35,6 +39,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "enc" {
   }
 }
 
+# bucket policy
 resource "aws_s3_bucket_policy" "tls_only" {
   bucket = aws_s3_bucket.tfstate.id
   policy = jsonencode({
