@@ -14,6 +14,7 @@ resource "aws_iam_openid_connect_provider" "github" {
   thumbprint_list = ["6938fd4d98bab03faadb97b34396831e3780aea1"] # GitHub’s current root
 }
 
+# iam policy document
 data "aws_iam_policy_document" "trust" {
   statement {
     effect  = "Allow"
@@ -41,6 +42,7 @@ data "aws_iam_policy_document" "trust" {
   }
 }
 
+# iam role 
 resource "aws_iam_role" "gha" {
   name               = var.role_name
   assume_role_policy = data.aws_iam_policy_document.trust.json
