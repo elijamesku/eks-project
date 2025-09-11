@@ -62,6 +62,7 @@ resource "aws_iam_role_policy" "inline" {
   }))
 }
 
+#output
 output "role_arn" { 
     value = aws_iam_role.gha.arn 
     }

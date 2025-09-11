@@ -1,3 +1,4 @@
+#local init
 locals {
   env = "prod"
 }

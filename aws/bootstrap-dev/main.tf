@@ -1,3 +1,4 @@
+#local def
 locals {
   env = "dev"
 }
