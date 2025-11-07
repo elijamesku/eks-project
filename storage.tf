@@ -1,7 +1,6 @@
-resource "aws_s3_bucket" "jollyr" {
-  bucket = "jollyr"
+resource "aws_s3_bucket" "topskys" {
+  bucket = "topskys"
   tags = {
-    Name      = "jollyr"
-    ManagedBy = "Infrara"
+    Name = "topskys"
   }
 }
