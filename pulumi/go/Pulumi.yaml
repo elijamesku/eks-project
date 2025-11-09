@@ -1,0 +1,3 @@
+name: pulumi-infrastructure
+runtime: go
+description: Converted from Terraform
