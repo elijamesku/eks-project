@@ -46,3 +46,10 @@ resource "aws_s3_bucket" "main" {
     Name = "my-s3-bucket"
   }
 }
+
+resource "aws_s3_bucket" "vancleee" {
+  bucket = "vancleee"
+  tags = {
+    Name = "vancleee"
+  }
+}
