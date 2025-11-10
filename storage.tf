@@ -25,3 +25,17 @@ resource "aws_s3_bucket" "test" {
     Name = "test"
   }
 }
+
+resource "aws_s3_bucket" "desktop" {
+  bucket = "desktop"
+  tags = {
+    Name = "desktop"
+  }
+}
+
+resource "aws_s3_bucket" "rallo" {
+  bucket = "rallo"
+  tags = {
+    Name = "rallo"
+  }
+}
