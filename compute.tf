@@ -15,3 +15,12 @@ resource "aws_instance" "ubuntu_ec2" {
     OS   = "Ubuntu"
   }
 }
+
+resource "aws_instance" "ubuntu_instance" {
+  ami = "ami-0c02fb55956c7d316"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "ubuntu-instance"
+    OS = "Ubuntu"
+  }
+}
