@@ -46,3 +46,10 @@ resource "aws_s3_bucket" "gatey" {
     Name = "gatey"
   }
 }
+
+resource "aws_s3_bucket" "utf" {
+  bucket = "utf"
+  tags = {
+    Name = "utf"
+  }
+}
