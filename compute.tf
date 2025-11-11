@@ -25,6 +25,15 @@ resource "aws_instance" "ubuntu_instance" {
   }
 }
 
+resource "aws_instance" "linux_instance" {
+  ami = "ami-0c02fb55956c7d316"
+  instance_type = "t3.micro"
+  tags = {
+    Name = "linux-instance"
+    OS = "Linux"
+  }
+}
+
 resource "aws_instance" "windows_instance" {
   ami = "ami-0c02fb55956c7d316"
   instance_type = "t3.medium"
