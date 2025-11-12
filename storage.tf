@@ -1,10 +1,3 @@
-resource "aws_s3_bucket" "scotty" {
-  bucket = "scotty"
-  tags = {
-    Name = "scotty"
-  }
-}
-
 resource "aws_s3_bucket" "rosie" {
   bucket = "rosie"
   tags = {
@@ -37,5 +30,13 @@ resource "aws_s3_bucket" "kinns" {
   bucket = "kinns"
   tags = {
     Name = "kinns"
+  }
+}
+
+resource "aws_s3_bucket" "scotty" {
+  tags = {
+    Name = "scotty"
+    Environment = "production"
+    ManagedBy = "terraform"
   }
 }
