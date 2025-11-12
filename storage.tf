@@ -4,3 +4,10 @@ resource "aws_s3_bucket" "scotty" {
     Name = "scotty"
   }
 }
+
+resource "aws_s3_bucket" "rosie" {
+  bucket = "rosie"
+  tags = {
+    Name = "rosie"
+  }
+}
