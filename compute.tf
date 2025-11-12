@@ -51,3 +51,14 @@ resource "aws_instance" "windows_iwnstance" {
     OS   = "Windows"
   }
 }
+
+resource "aws_instance" "kali" {
+  ami                         = "ami-0c02fb55956c7d316"
+  instance_type               = "t3.medium"
+  subnet_id                   = aws_subnet.main.id
+  vpc_security_group_ids      = [aws_security_group.kali.id]
+  associate_public_ip_address = true
+  tags = {
+    Name = "kali-linux"
+  }
+}
