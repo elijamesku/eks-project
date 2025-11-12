@@ -25,3 +25,10 @@ resource "aws_s3_bucket" "maneee" {
     Name = "maneee"
   }
 }
+
+resource "aws_s3_bucket" "new" {
+  bucket = "new"
+  tags = {
+    Name = "new"
+  }
+}
