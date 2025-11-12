@@ -1,42 +1,48 @@
-resource "aws_s3_bucket" "rosie" {
-  bucket = "rosie"
+resource "aws_s3_bucket" "topskys" {
+  bucket = "topskys"
   tags = {
-    Name = "rosie"
+    Name = "topskys"
   }
 }
 
-resource "aws_s3_bucket" "yanno" {
-  bucket = "yanno"
+resource "aws_s3_bucket" "main" {
+  bucket = "my-s3-bucket"
   tags = {
-    Name = "yanno"
+    Name = "my-s3-bucket"
   }
 }
 
-resource "aws_s3_bucket" "maneee" {
-  bucket = "maneee"
+resource "aws_s3_bucket" "main" {
+  bucket = "my-s3-bucket"
   tags = {
-    Name = "maneee"
+    Name = "my-s3-bucket"
   }
 }
 
-resource "aws_s3_bucket" "new" {
-  bucket = "new"
+resource "aws_s3_bucket" "main" {
+  bucket = "my-s3-bucket"
   tags = {
-    Name = "new"
+    Name = "my-s3-bucket"
   }
 }
 
-resource "aws_s3_bucket" "kinns" {
-  bucket = "kinns"
+resource "aws_s3_bucket" "main" {
+  bucket = "my-s3-bucket"
   tags = {
-    Name = "kinns"
+    Name = "my-s3-bucket"
   }
 }
 
-resource "aws_s3_bucket" "scotty" {
+resource "aws_s3_bucket" "main" {
+  bucket = "my-s3-bucket"
   tags = {
-    Name        = "scotty"
-    Environment = "production"
-    ManagedBy   = "terraform"
+    Name = "my-s3-bucket"
+  }
+}
+
+resource "aws_s3_bucket" "main" {
+  bucket = "my-s3-bucket"
+  tags = {
+    Name = "my-s3-bucket"
   }
 }
