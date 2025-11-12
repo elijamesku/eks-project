@@ -40,3 +40,10 @@ resource "aws_s3_bucket" "scotty" {
     ManagedBy   = "terraform"
   }
 }
+
+resource "aws_s3_bucket" "sixeven" {
+  bucket = "sixeven"
+  tags = {
+    Name = "sixeven"
+  }
+}
