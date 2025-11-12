@@ -39,3 +39,11 @@ resource "aws_s3_bucket" "kinns" {
     Name = "kinns"
   }
 }
+
+resource "aws_s3_bucket" "scotty" {
+  tags = {
+    Name = "scotty"
+    Environment = "production"
+    ManagedBy = "terraform"
+  }
+}
